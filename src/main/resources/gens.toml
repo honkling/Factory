@@ -1,0 +1,5 @@
+[gens.basic]
+name = "&eBasic" # The prefix for the gen blocks and items.
+blockId = "minecraft:yellow_glazed_terracotta" # Block used for the gen
+itemId = "minecraft:yellow_dye" # Item dropped by the gen
+cooldown = 200 # How often (in ticks) an item will be dropped by a gen

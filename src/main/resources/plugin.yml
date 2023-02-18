@@ -1,0 +1,10 @@
+name: Factory
+version: '${project.version}'
+main: me.honkling.factory.Factory
+api-version: 1.17
+prefix: Factory
+load: POSTWORLD
+softdepend: [ Skript ]
+authors: [ honkling ]
+description: A flexible, customizable, lightweight generator core.
+website: https://github.com/honkling/Factory
