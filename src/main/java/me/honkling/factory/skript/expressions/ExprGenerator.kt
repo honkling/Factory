@@ -26,8 +26,6 @@ class ExprGenerator : SimpleExpression<Generator>() {
                 Generator::class.java,
                 ExpressionType.SIMPLE,
             "generator [(with|by) [id]] %string%")
-
-            println("register generator")
         }
     }
 
