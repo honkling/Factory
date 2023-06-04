@@ -20,6 +20,7 @@
     <url>https://github.com/honkling/Factory</url>
 
     <build>
+        <finalName>Factory</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
