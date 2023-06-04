@@ -1,0 +1,29 @@
+name: Publish Release
+on:
+  workflow_run:
+    workflows: ["Build"]
+    branches: [ master ]
+    types:
+      - completed
+
+permissions: write-all
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Jar
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: build.yml
+          name: ${{ github.event.repository.name }}.jar
+          path: target/Factory.jar
+
+      - name: Create Release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          title: "Latest Release"
+          files: ./target/Factory.jar
